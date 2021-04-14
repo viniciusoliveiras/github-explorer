@@ -43,12 +43,12 @@ Você pode acessar a aplicação através [`deste link`](https://vo-github-explo
 
 ## ✍🏾 Autor
 <a href="https://github.com/viniciusoliveiras/">
- <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/64497059?v=4" width="100px;" alt=""/>
+ <img style="border-radius: 50%!important;" src="https://avatars.githubusercontent.com/u/64497059?v=4" width="100px;" alt=""/>
  <br />
  <p>Vinícius Oliveira</p>
 </a>  
 
-[![Linkedin Badge](https://img.shields.io/badge/-ViníciusOliveira-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/viniciusoliveiras-01532/)](https://www.linkedin.com/in/viniciusoliveiras-01532/)
+[![Linkedin Badge](https://img.shields.io/badge/-Vinícius%20Oliveira-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/viniciusoliveiras-01532/)](https://www.linkedin.com/in/viniciusoliveiras-01532/)
 [![Gmail Badge](https://img.shields.io/badge/-vinitag190@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:vinitag190@gmail.com)](mailto:vinitag190@gmail.com)
 
 ## 📄 Licença
