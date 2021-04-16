@@ -9,7 +9,7 @@ section.repository-list {
     line-height: 3.641rem;
   }
 
-  div.searchRepo {
+  form.searchRepo {
     width: 44.625rem;
     height: 4.5rem;
 
@@ -24,12 +24,13 @@ section.repository-list {
       background-color: #fff;
       border: 0;
       border-radius: 0.313rem 0 0 0.313rem;
+      color: #121214;
+      font-size: 1.25rem;
+      padding-left: 1.813rem;
     }
 
     input::placeholder {
       color: #a8a8b3;
-      font-size: 1.25rem;
-      padding-left: 1.813rem;
     }
 
     button {
@@ -45,7 +46,7 @@ section.repository-list {
     }
   }
 
-  div.repository-item {
+  a.repository-item {
     width: 44.625rem;
     height: 7rem;
 
@@ -53,31 +54,45 @@ section.repository-list {
 
     background-color: #fff;
 
+    padding: 0 2%;
+
     display: flex;
     align-items: center;
+    justify-content: space-between;
 
-    & + div {
+    text-decoration: none;
+
+    & + a {
       margin-top: 20px;
     }
 
-    a {
-      display: inline-block;
-      text-decoration: none;
-      margin-left: 1.5rem;
+    div {
+      display: flex;
+      align-items: center;
 
-      strong {
-        font-weight: 700;
-        font-size: 1.5rem;
-        line-height: 1.758rem;
-        color: #3d3d4d;
+      img {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 100%;
       }
 
-      p {
-        margin-top: 0.25rem;
-        font-size: 1.125rem;
-        font-weight: 400;
-        line-height: 1.318rem;
-        color: #a8a8b3;
+      div {
+        display: inline-block;
+        margin-left: 1.5rem;
+        strong {
+          font-weight: 700;
+          font-size: 1.5rem;
+          line-height: 1.758rem;
+          color: #3d3d4d;
+        }
+
+        p {
+          margin-top: 0.25rem;
+          font-size: 1.125rem;
+          font-weight: 400;
+          line-height: 1.318rem;
+          color: #a8a8b3;
+        }
       }
     }
   }
