@@ -3,6 +3,8 @@ import { RepositoryItem } from './RepositoryItem';
 
 import '../styles/repositories.scss';
 
+import logoImg from '../assets/logo.svg';
+
 interface Repository {
   name: string;
   description: string;
@@ -20,15 +22,25 @@ export function RepositoryList() {
 
   return (
     <section className='repository-list'>
-      <h1>Lista de Repositórios</h1>
+      <img src={logoImg} alt='teste' />
 
-      <ul>
-        {repositories.map((repository) => {
-          return (
-            <RepositoryItem key={repository.name} repository={repository} />
-          );
-        })}
-      </ul>
+      <h1>
+        Explore repositórios <br /> no Github.
+      </h1>
+
+      <div className='searchRepo'>
+        <input
+          type='text'
+          name='searchRepo'
+          id='searchRepo'
+          placeholder='Digite aqui'
+        />
+        <button type='button'>Pesquisar</button>
+      </div>
+
+      {repositories.map((repository) => {
+        return <RepositoryItem key={repository.name} repository={repository} />;
+      })}
     </section>
   );
 }
