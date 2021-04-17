@@ -1,10 +1,12 @@
 import { useState, useEffect, FormEvent } from 'react';
-import { RepositoryItem } from './RepositoryItem';
+import Loader from 'react-loader-spinner';
 
 import '../styles/repositories.scss';
 
-import logoImg from '../assets/logo.svg';
+import { RepositoryItem } from './RepositoryItem';
 import { api } from '../services/api';
+
+import logoImg from '../assets/logo.svg';
 
 interface Repository {
   name: string;
@@ -13,7 +15,7 @@ interface Repository {
 }
 
 interface UserInfos {
-  avatar_url: string;
+  avatar_url?: string;
 }
 
 export function RepositoryList() {
@@ -31,22 +33,20 @@ export function RepositoryList() {
   }
 
   function searchUser() {
-    fetch(`https://api.github.com/users/${username}/repos`).then((response) =>
-      response.json().then((data) => setRepositories(data))
-    );
-
+    api
+      .get(`${username}/repos`)
+      .then((response) => setRepositories(response.data));
     api
       .get(`${username}`)
       .then((response) => setUserAvatar(response.data.avatar_url));
-
     api.get(`${username}`).then((response) => setUserName(response.data.login));
   }
 
-  useEffect(() => {
-    fetch(
-      'https://api.github.com/users/viniciusoliveiras/repos'
-    ).then((response) => response.json().then((data) => setRepositories(data)));
-  }, []);
+  // useEffect(() => {
+  //   fetch(
+  //     'https://api.github.com/users/viniciusoliveiras/repos'
+  //   ).then((response) => response.json().then((data) => setRepositories(data)));
+  // }, []);
 
   return (
     <section className='repository-list'>
@@ -69,16 +69,17 @@ export function RepositoryList() {
         <button type='submit'>Pesquisar</button>
       </form>
 
-      {repositories.map((repository) => {
-        return (
-          <RepositoryItem
-            key={repository.name}
-            repository={repository}
-            avatar_url={userAvatar}
-            login={userName}
-          />
-        );
-      })}
+      {repositories &&
+        repositories.map((repository) => {
+          return (
+            <RepositoryItem
+              key={repository.name}
+              repository={repository}
+              avatar_url={userAvatar}
+              login={userName}
+            />
+          );
+        })}
     </section>
   );
 }
