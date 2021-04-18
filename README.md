@@ -5,21 +5,21 @@
 <h1 align="center">Github Explorer</h1>
 
 <p align="center">
-    <img alt="License" src="https://img.shields.io/github/license/viniciusoliveiras/github-explorer" />
-    <img src="https://img.shields.io/github/last-commit/viniciusoliveiras/github-explorer" />
-    <img alt="Netlify"  src="https://img.shields.io/netlify/273fbbb5-f55c-4f95-8fdc-9b8e08235181" />
-    <img alt="Ignite 01" src="https://img.shields.io/badge/ignite-01-SUCESS" />
+	<img alt="Ignite 01" src="https://img.shields.io/badge/ignite-01-SUCESS" />
+	<img alt="License" src="https://img.shields.io/github/license/viniciusoliveiras/github-explorer" />
+	<img src="https://img.shields.io/github/last-commit/viniciusoliveiras/github-explorer" />
+	<img alt="Netlify"  src="https://api.netlify.com/api/v1/badges/273fbbb5-f55c-4f95-8fdc-9b8e08235181/deploy-status" />
 </p>
 
 
 
 <p align="center">
- <a href="#-tecnologias">Tecnologias</a> •
- <a href="#-projeto">Projeto</a> • 
- <a href="#-layout">Layout</a> • 
- <a href="#-como-acessar">Como acessar</a> • 
- <a href="#-autor">Autor</a> • 
- <a href="#-licença">Licença</a>
+	<a href="#-tecnologias">Tecnologias</a> •
+	<a href="#-projeto">Projeto</a> • 
+	<a href="#-layout">Layout</a> • 
+	<a href="#-como-acessar">Como acessar</a> • 
+	<a href="#-autor">Autor</a> • 
+	<a href="#-licença">Licença</a>
 </p>
 
 <h4 align="center"> 
