@@ -24,7 +24,7 @@ export function RepositoryItem({
         <img src={avatar || userImg} alt='github' />
         <div>
           <strong>
-            {login}/{repository.name}
+            {repository.name}
           </strong>
           <p>{repository.description}</p>
         </div>
