@@ -46,6 +46,12 @@ section.repository-list {
     }
   }
 
+  div.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   a.repository-item {
     width: 44.625rem;
     height: 7rem;

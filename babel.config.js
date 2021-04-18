@@ -9,5 +9,5 @@ module.exports = {
       },
     ],
   ],
-  plugins: ['emotion'],
+  plugins: ['emotion', 'transform-async-to-generator'],
 };

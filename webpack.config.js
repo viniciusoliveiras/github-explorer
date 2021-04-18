@@ -7,7 +7,7 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 module.exports = {
   mode: isDevelopment ? 'development' : 'production',
   devtool: isDevelopment ? 'eval-source-map' : 'source-map',
-  entry: path.resolve(__dirname, 'src', 'index.tsx'),
+  entry: ['babel-polyfill', path.resolve(__dirname, 'src', 'index.tsx')],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -46,7 +46,7 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
-        use: { loader: 'url-loader?limit=100000' },
+        use: { loader: 'file-loader' },
       },
     ],
   },

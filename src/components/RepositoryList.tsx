@@ -24,22 +24,25 @@ export function RepositoryList() {
   const [userAvatar, setUserAvatar] = useState(
     'https://avatars.githubusercontent.com/u/64497059?v=4'
   );
-  const [userName, setUserName] = useState('viniciusoliveiras');
+  const [login, setLogin] = useState('viniciusoliveiras');
+  const [isLoading, setLoading] = useState(false);
 
-  function handleSearchUserRepos(event: FormEvent) {
+  async function handleUserSearch(event: FormEvent) {
     event.preventDefault();
-    searchUser();
-    setUsername('');
-  }
 
-  function searchUser() {
-    api
-      .get(`${username}/repos`)
-      .then((response) => setRepositories(response.data));
-    api
-      .get(`${username}`)
-      .then((response) => setUserAvatar(response.data.avatar_url));
-    api.get(`${username}`).then((response) => setUserName(response.data.login));
+    setUsername('');
+    setLoading(true);
+    setRepositories([]);
+    
+    const responseRepos = await api.get(`${username}/repos`);
+    const responseData = await api.get(`${username}`);
+
+    setTimeout(() => {
+      setLoading(false);
+      setRepositories(responseRepos.data);
+      setUserAvatar(responseData.data.avatar_url);
+      setLogin(responseData.data.login);
+    }, 800);
   }
 
   // useEffect(() => {
@@ -56,7 +59,7 @@ export function RepositoryList() {
         Explore repositórios <br /> no Github.
       </h1>
 
-      <form className='searchRepo' onSubmit={handleSearchUserRepos}>
+      <form className='searchRepo' onSubmit={handleUserSearch}>
         <input
           type='text'
           name='username'
@@ -69,6 +72,17 @@ export function RepositoryList() {
         <button type='submit'>Pesquisar</button>
       </form>
 
+      {isLoading && (
+        <div className='loader'>
+          <Loader
+            type='RevolvingDot'
+            color='#04d361'
+            height={100}
+            width={100}
+          />
+        </div>
+      )}
+
       {repositories &&
         repositories.map((repository) => {
           return (
@@ -76,7 +90,7 @@ export function RepositoryList() {
               key={repository.name}
               repository={repository}
               avatar_url={userAvatar}
-              login={userName}
+              login={login}
             />
           );
         })}
