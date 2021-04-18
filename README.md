@@ -5,10 +5,10 @@
 <h1 align="center">Github Explorer</h1>
 
 <p align="center">
-    <img alt="License" src="https://img.shields.io/github/license/viniciusoliveiras/github-explorer?style=plastic">
-    <img src="https://img.shields.io/github/last-commit/viniciusoliveiras/github-explorer?style=plastic"/>
-    <img alt="Netlify"  src="https://img.shields.io/netlify/273fbbb5-f55c-4f95-8fdc-9b8e08235181?style=plastic">
-    <img alt="Ignite 01" src="https://img.shields.io/badge/ignite-01-SUCESS?style=plastic">
+    <img alt="License" src="https://img.shields.io/github/license/viniciusoliveiras/github-explorer" />
+    <img src="https://img.shields.io/github/last-commit/viniciusoliveiras/github-explorer" />
+    <img alt="Netlify"  src="https://img.shields.io/netlify/273fbbb5-f55c-4f95-8fdc-9b8e08235181" />
+    <img alt="Ignite 01" src="https://img.shields.io/badge/ignite-01-SUCESS" />
 </p>
 
 
