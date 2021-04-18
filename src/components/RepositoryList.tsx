@@ -1,5 +1,6 @@
 import { useState, useEffect, FormEvent } from 'react';
 import Loader from 'react-loader-spinner';
+import { toast, Zoom } from 'react-toastify';
 
 import '../styles/repositories.scss';
 
@@ -33,16 +34,30 @@ export function RepositoryList() {
     setUsername('');
     setLoading(true);
     setRepositories([]);
-    
-    const responseRepos = await api.get(`${username}/repos`);
-    const responseData = await api.get(`${username}`);
 
-    setTimeout(() => {
+    try {
+      const responseRepos = await api.get(`${username}/repos`);
+      const responseData = await api.get(`${username}`);
+
+      setTimeout(() => {
+        setLoading(false);
+        setRepositories(responseRepos.data);
+        setUserAvatar(responseData.data.avatar_url);
+        setLogin(responseData.data.login);
+      }, 800);
+    } catch {
       setLoading(false);
-      setRepositories(responseRepos.data);
-      setUserAvatar(responseData.data.avatar_url);
-      setLogin(responseData.data.login);
-    }, 800);
+      toast.error('Usuário não encontrado no Github', {
+        position: 'top-right',
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        transition: Zoom,
+      });
+    }
   }
 
   // useEffect(() => {
