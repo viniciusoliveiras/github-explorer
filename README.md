@@ -1,21 +1,25 @@
 <h1 align="center">
-  <img alt="explorer" src="https://i.imgur.com/tXzdOlR.png?2" />
+  <img alt="explorer" src="https://i.imgur.com/Q07cKqY.png?1" />
 </h1>
 
 <h1 align="center">Github Explorer</h1>
 
 <p align="center">
-  <img alt="License" src="https://img.shields.io/github/license/viniciusoliveiras/github-explorer">
-  <img alt="Ignite 01" src="https://img.shields.io/badge/IGNITE-01-green?link=https://help.rocketseat.com.br/hc/pt-br/articles/1500003228822-O-que-%C3%A9-o-Ignite-">
+	<img alt="Ignite 01" src="https://img.shields.io/badge/ignite-01-SUCESS" />
+	<img alt="License" src="https://img.shields.io/github/license/viniciusoliveiras/github-explorer" />
+	<img src="https://img.shields.io/github/last-commit/viniciusoliveiras/github-explorer" />
+	<img alt="Netlify"  src="https://api.netlify.com/api/v1/badges/273fbbb5-f55c-4f95-8fdc-9b8e08235181/deploy-status" />
 </p>
 
+
+
 <p align="center">
- <a href="#-tecnologias">Tecnologias</a> •
- <a href="#-projeto">Projeto</a> • 
- <a href="#-layout">Layout</a> • 
- <a href="#-como-acessar">Como acessar</a> • 
- <a href="#-autor">Autor</a> • 
- <a href="#-licença">Licença</a>
+	<a href="#-tecnologias">Tecnologias</a> •
+	<a href="#-projeto">Projeto</a> • 
+	<a href="#-layout">Layout</a> • 
+	<a href="#-como-acessar">Como acessar</a> • 
+	<a href="#-autor">Autor</a> • 
+	<a href="#-licença">Licença</a>
 </p>
 
 <h4 align="center"> 
@@ -33,9 +37,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 O Github Explorer é um app que faz a busca por todos os reposórios públicos de um usuário e os exibe em tela.
 
-## 🔖 Layout
+## 🎨 Layout
 
-O layout ainda está em desenvolvimento e estará disponível em breve.
+Você pode visualizar o layout da aplicação através [`deste link`](https://www.figma.com/file/HOCmxfrElzLpI75LdzFLia/Github-Explorer?node-id=226%3A43) em seu navegado. É necessário ter conta no [Figma](http://figma.com/) para acessá-lo.
 
 ## 🚀 Como acessar
 
