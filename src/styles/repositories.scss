@@ -10,7 +10,7 @@ section.repository-list {
   }
 
   form.searchRepo {
-    width: 44.625rem;
+    width: 50vw;
     height: 4.5rem;
 
     margin-top: 2.5rem;
@@ -54,7 +54,7 @@ section.repository-list {
   }
 
   a.repository-item {
-    width: 44.625rem;
+    width: 50vw;
     height: 7rem;
 
     border-radius: 0.313rem;
@@ -114,10 +114,18 @@ section.repository-list {
 @media (max-width: 768px) {
   section.repository-list {
     margin: 2.5rem 2rem 3.75rem 2rem;
+
+    form.searchRepo {
+      width: 80vw;
+    }
+
+    a.repository-item {
+      width: 80vw;
+    }
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 550px) {
   section.repository-list {
     margin: 2.5rem 1rem 3.75rem 1rem;
 
@@ -127,7 +135,7 @@ section.repository-list {
     }
 
     form.searchRepo {
-      width: 25rem;
+      width: 94vw;
       height: 4.5rem;
 
       margin-bottom: 5.5rem;
@@ -143,7 +151,7 @@ section.repository-list {
     }
 
     a.repository-item {
-      width: 24.5rem;
+      width: 92vw;
       height: 9.5rem;
       margin-left: 0.15rem;
 
@@ -178,7 +186,7 @@ section.repository-list {
     }
 
     form.searchRepo {
-      width: 22rem;
+      width: 93vw;
 
       margin-bottom: 3.5rem;
 
@@ -194,7 +202,7 @@ section.repository-list {
     }
 
     a.repository-item {
-      width: 21.5rem;
+      width: 91vw;
     }
   }
 }
@@ -209,7 +217,7 @@ section.repository-list {
     }
 
     form.searchRepo {
-      width: 18.7rem;
+      width: 93vw;
 
       input {
         font-size: 0.8rem;
@@ -222,7 +230,7 @@ section.repository-list {
     }
 
     a.repository-item {
-      width: 18.3rem;
+      width: 91vw;
 
       div {
         img {
